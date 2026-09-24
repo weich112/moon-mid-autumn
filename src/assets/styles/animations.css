@@ -1,0 +1,140 @@
+/* 全局关键帧动画：全部走 transform / opacity，保证合成层性能 */
+
+/* 圆月呼吸：轻微缩放 + 明度起伏 */
+@keyframes moon-breathe {
+  0%,
+  100% {
+    transform: scale(1);
+    filter: brightness(1);
+  }
+  50% {
+    transform: scale(1.028);
+    filter: brightness(1.06);
+  }
+}
+
+/* 光晕呼吸：不同节奏形成层次 */
+@keyframes halo-breathe {
+  0%,
+  100% {
+    opacity: 0.72;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.08);
+  }
+}
+
+/* 光晕缓慢游移 */
+@keyframes halo-drift {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  33% {
+    transform: translate3d(1.6%, -1.2%, 0) scale(1.03);
+  }
+  66% {
+    transform: translate3d(-1.4%, 1%, 0) scale(0.99);
+  }
+}
+
+/* 云层无缝横向漂移（容器宽 200%，两张相同云图各占一半） */
+@keyframes cloud-drift {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+/* 圆月缓缓升起 */
+@keyframes moon-rise {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 72px, 0) scale(0.94);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+}
+
+/* 标题逐字淡入：上浮 + 去虚 */
+@keyframes char-in {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 0.6em, 0) scale(0.96);
+    filter: blur(7px);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0) scale(1);
+    filter: blur(0);
+  }
+}
+
+/* 通用上浮淡入 */
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 26px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+/* 星光闪烁 */
+@keyframes twinkle {
+  0%,
+  100% {
+    opacity: 0.15;
+    transform: scale(0.8);
+  }
+  50% {
+    opacity: 0.9;
+    transform: scale(1);
+  }
+}
+
+/* 落款印章呼吸 */
+@keyframes seal-breathe {
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgba(216, 185, 106, 0);
+  }
+  50% {
+    box-shadow: 0 0 22px 2px rgba(216, 185, 106, 0.35);
+  }
+}
+
+/* 底部滚动提示的游走光点 */
+@keyframes scroll-dot {
+  0% {
+    transform: translateY(-70%);
+    opacity: 0;
+  }
+  35% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(70%);
+    opacity: 0;
+  }
+}
+
+/* 尊重系统「减弱动态效果」偏好 */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}

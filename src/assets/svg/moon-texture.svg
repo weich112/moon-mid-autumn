@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" fill="none">
+  <defs>
+    <radialGradient id="moonCraterShade" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#8d6f3c" stop-opacity="0.55" />
+      <stop offset="0.7" stop-color="#8d6f3c" stop-opacity="0.18" />
+      <stop offset="1" stop-color="#8d6f3c" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+  <!-- 月面环形山与纹理，低透明度叠加，营造真实月壤质感 -->
+  <g fill="url(#moonCraterShade)">
+    <circle cx="146" cy="140" r="44" />
+    <circle cx="238" cy="196" r="58" />
+    <circle cx="168" cy="256" r="34" />
+    <circle cx="272" cy="118" r="26" />
+    <circle cx="96" cy="224" r="22" />
+    <circle cx="300" cy="256" r="30" />
+    <circle cx="212" cy="86" r="18" />
+  </g>
+  <g fill="#fdf8e9" opacity="0.16">
+    <circle cx="146" cy="140" r="20" />
+    <circle cx="238" cy="196" r="26" />
+    <circle cx="272" cy="118" r="11" />
+    <circle cx="168" cy="256" r="13" />
+  </g>
+</svg>

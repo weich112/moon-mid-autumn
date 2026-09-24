@@ -1,0 +1,11 @@
+# 依赖与构建产物，绝不可上传/提交，否则会被判定为“需要构建的项目”
+node_modules
+dist
+dist-cf
+*.zip
+.wrangler
+.dev.vars
+.env
+.env.*
+*.local
+.DS_Store

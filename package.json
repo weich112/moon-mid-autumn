@@ -1,0 +1,23 @@
+{
+  "name": "moon-mid-autumn",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "月寄中秋 · 国风沉浸式中秋祝福站点（Vue3 + Vite）",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "deploy": "npm run build && wrangler deploy",
+    "deploy:pages": "npm run build && wrangler pages deploy dist",
+    "cf:preview": "npm run build && wrangler dev"
+  },
+  "dependencies": {
+    "vue": "^3.5.13"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.2.1",
+    "vite": "^6.0.7",
+    "wrangler": "^4.138.0"
+  }
+}

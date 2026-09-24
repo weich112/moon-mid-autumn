@@ -1,0 +1,10 @@
+# Cloudflare Workers 静态资源部署配置（月寄中秋）
+# 部署命令：npm run deploy（内部先执行 vite build，再 wrangler deploy）
+name = "moon-mid-autumn"
+compatibility_date = "2024-11-01"
+
+# 仅部署静态资源，不需要 Worker 脚本
+[assets]
+directory = "./dist"
+# 单页应用：未命中的路径一律回退到 index.html
+not_found_handling = "single-page-application"

@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 300" preserveAspectRatio="none" fill="none">
+  <defs>
+    <linearGradient id="cloudGradB" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#e6ecff" stop-opacity="0.5" />
+      <stop offset="0.6" stop-color="#b9c6ea" stop-opacity="0.24" />
+      <stop offset="1" stop-color="#7d90c8" stop-opacity="0.04" />
+    </linearGradient>
+    <filter id="cloudBlurB" x="-15%" y="-60%" width="130%" height="220%">
+      <feGaussianBlur stdDeviation="16" />
+    </filter>
+  </defs>
+  <g filter="url(#cloudBlurB)" fill="url(#cloudGradB)">
+    <ellipse cx="300" cy="184" rx="225" ry="80" />
+    <ellipse cx="566" cy="146" rx="190" ry="74" />
+    <ellipse cx="852" cy="188" rx="235" ry="82" />
+    <rect x="210" y="184" width="820" height="82" rx="41" />
+  </g>
+</svg>
